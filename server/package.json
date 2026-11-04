@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "emma-server",
+  "keywords": [
+    "emma_backend"
+  ],
+  "license": "ISC",
+  "author": "rasid ekbal",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "test",
+    "build": "npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --ext ts,json --exec tsx src/server.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "github:types/express",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "eazyotp": "^2.5.0",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
